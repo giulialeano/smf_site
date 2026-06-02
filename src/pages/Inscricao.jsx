@@ -120,34 +120,29 @@ const Inscricao = () => {
     setIsSubmitting(true)
     
     try {
-      const modalidadeSelecionada = modalidades.find(m => m.value === formData.modalidade)
+      const formDataToSend = new FormData()
+      formDataToSend.append('nomeCompleto', sanitizeInput(formData.nomeCompleto))
+      formDataToSend.append('email', sanitizeInput(formData.email))
+      formDataToSend.append('telefone', sanitizeInput(formData.telefone))
+      formDataToSend.append('modalidade', formData.modalidade)
+      formDataToSend.append('nomeCracha', sanitizeInput(formData.nomeCracha))
+      formDataToSend.append('comprovante', comprovante)
       
-      // Preparar dados da inscrição
-      const inscricaoData = {
-        nome: sanitizeInput(formData.nomeCompleto),
-        email: sanitizeInput(formData.email),
-        telefone: sanitizeInput(formData.telefone),
-        modalidade: formData.modalidade,
-        modalidadeLabel: modalidadeSelecionada?.label,
-        nomeCracha: sanitizeInput(formData.nomeCracha),
-        valor: modalidadeSelecionada?.price,
-        comprovanteNome: comprovante.name,
-        dataInscricao: new Date().toISOString()
+      const response = await fetch('http://localhost:5000/api/inscricoes', {
+        method: 'POST',
+        body: formDataToSend
+      })
+      
+      const data = await response.json()
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Erro ao salvar inscrição')
       }
-      
-      // TODO: Integrar com API real
-      // const formDataToSend = new FormData()
-      // formDataToSend.append('dados', JSON.stringify(inscricaoData))
-      // formDataToSend.append('comprovante', comprovante)
-      // await fetch('/api/inscricoes', { method: 'POST', body: formDataToSend })
-      
-      // Salvar no localStorage temporariamente
-      localStorage.setItem('inscricao_realizada', JSON.stringify(inscricaoData))
       
       setInscricaoRealizada(true)
       
     } catch (error) {
-      setMensagem('Erro ao processar inscrição. Tente novamente.')
+      setMensagem(error.message || 'Erro ao processar inscrição. Tente novamente.')
     } finally {
       setIsSubmitting(false)
     }
@@ -160,8 +155,7 @@ const Inscricao = () => {
         <div className="success-container">
           <div className="success-icon">✓</div>
           <h2>Inscrição realizada com sucesso!</h2>
-          <p>Sua inscrição foi registrada e o comprovante foi enviado.</p>
-          <p className="info-obs">Em breve você receberá um e-mail de confirmação.</p>
+          <p>Seus dados foram cadastrados.</p>
           <button className="btn-primary" onClick={() => navigate('/')}>
             Voltar para o site
           </button>
@@ -315,7 +309,7 @@ const Inscricao = () => {
               accept=".pdf,.jpg,.png,.jpeg"
             />
             <label htmlFor="comprovante" className="file-input-label">
-               {comprovante ? comprovante.name : 'Selecionar comprovante'}
+              📄 {comprovante ? comprovante.name : 'Selecionar comprovante'}
             </label>
           </div>
           <p className="form-hint">PDF, JPG ou PNG - máximo 5MB</p>
