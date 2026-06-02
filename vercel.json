@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "site-publico/**",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "site-publico/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/site-publico/$1"
+    }
+  ]
+}
