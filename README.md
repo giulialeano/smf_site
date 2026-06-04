@@ -8,16 +8,4 @@ Site oficial do evento da Unidade Acadêmica de Física da UFCG.
 
 **Local:** Centro de Extensão José Farias Nóbrega - UFCG, Campina Grande - PB
 
-## 🔗 Acesse o site
 
-[https://semanadafisica.netlify.app](https://semanadafisica.netlify.app)
-
-## 🛠️ Tecnologias
-
-- React + Vite
-- React Router DOM
-- CSS Modules
-
-## 📄 Licença
-
-MIT
