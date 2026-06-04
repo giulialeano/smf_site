@@ -4,7 +4,8 @@ const Navigation = () => {
   const pages = [
     { path: '/', label: 'Início' },
     { path: '/programacao', label: 'Programação' },
-    { path: '/submissoes', label: 'Submissões' }
+    { path: '/submissoes', label: 'Submissões' },
+    { path: '/camisetas', label: 'Camisetas' }   // ← NOVA ABA
   ]
 
   return (

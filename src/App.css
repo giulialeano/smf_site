@@ -822,3 +822,60 @@ form h3 {
   border-left: 4px solid #5e1a8f;
   padding-left: 15px;
 }
+
+/* Página de Camisetas */
+.camisetas-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.camiseta-info {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(94, 26, 143, 0.15);
+  border-radius: 20px;
+}
+
+.camiseta-preco {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #b87cff;
+}
+
+.camiseta-pix {
+  margin: 20px 0;
+  background: rgba(0, 168, 107, 0.1);
+  border: 1px solid rgba(0, 168, 107, 0.3);
+}
+
+.instrucoes-pagamento {
+  background: rgba(25, 0, 45, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.instrucoes-pagamento ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.instrucoes-pagamento li {
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #5e1a8f, #3a005a);
+  margin-top: 10px;
+}
+
+.btn-comprar:hover {
+  background: #7a2ab3;
+  transform: scale(1.02);
+}
