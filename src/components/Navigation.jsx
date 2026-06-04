@@ -4,7 +4,7 @@ const Navigation = () => {
   const pages = [
     { path: '/', label: 'Início' },
     { path: '/programacao', label: 'Programação' },
-    { path: '/login', label: 'Área do Participante' }
+    { path: '/submissoes', label: 'Submissões' }
   ]
 
   return (

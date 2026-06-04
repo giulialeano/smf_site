@@ -9,8 +9,7 @@ import CosmicDust from './components/CosmicDust'
 import BinaryFloat from './components/BinaryFloat'
 import Home from './pages/Home'
 import Programacao from './pages/Programacao'
-import Inscricao from './pages/Inscricao'
-import Login from './pages/Login'
+import Submissoes from './pages/Submissoes'
 
 function App() {
   return (
@@ -25,11 +24,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/programacao" element={<Programacao />} />
-          <Route path="/inscricao" element={<Inscricao />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/submissoes" element={<Submissoes />} />
         </Routes>
         <footer>
-          <p>© 2026 12ª Semana da Física | Unidade Acadêmica de Física - UFCG</p>
+          <p>© 2026 XII Semana da Física | Unidade Acadêmica de Física - UFCG</p>
           <p>Contato: <a href="mailto:semanadafisica.uaf@gmail.com">semanadafisica.uaf@gmail.com</a></p>
         </footer>
       </div>
