@@ -879,3 +879,614 @@ form h3 {
   background: #7a2ab3;
   transform: scale(1.02);
 }
+
+/* ========== PÁGINA DE SUBMISSÕES ========== */
+.submissoes-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Cards de informação */
+.info-card {
+  display: flex;
+  gap: 18px;
+  background: rgba(25, 0, 45, 0.6);
+  border-radius: 20px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(94, 26, 143, 0.3);
+  transition: all 0.2s ease;
+}
+
+.info-card:hover {
+  border-color: rgba(184, 124, 255, 0.5);
+  background: rgba(25, 0, 45, 0.75);
+}
+
+.info-card.warning {
+  background: rgba(255, 100, 100, 0.08);
+  border-left: 4px solid #ff6666;
+}
+
+.info-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.info-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d4b0ff;
+  margin-bottom: 8px;
+}
+
+.info-content p {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Card de prazo */
+.deadline-card {
+  background: linear-gradient(135deg, rgba(0, 168, 107, 0.15), rgba(0, 168, 107, 0.05));
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  text-align: center;
+  border: 1px solid rgba(0, 168, 107, 0.3);
+}
+
+.deadline-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.deadline-icon {
+  font-size: 1.3rem;
+}
+
+.deadline-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #00a86b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.deadline-date {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00a86b;
+  margin-bottom: 8px;
+}
+
+.deadline-note {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Card de contato */
+.contact-card {
+  background: rgba(184, 124, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px 24px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contact-card p {
+  margin-bottom: 8px;
+  color: #c0c0c0;
+}
+
+.contact-email {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #b87cff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-email:hover {
+  color: #e0b0ff;
+  text-decoration: underline;
+}
+
+/* Botão de submissão */
+.btn-submeter {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5e1a8f, #3a005a);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Space Grotesk', monospace;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 16px;
+}
+
+.btn-submeter:hover {
+  background: #7a2ab3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(94, 26, 143, 0.4);
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.btn-submeter:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.submissoes-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .info-card {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 18px;
+  }
+  
+  .deadline-date {
+    font-size: 1.4rem;
+  }
+  
+  .contact-email {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+}
+/* ========== PÁGINA DE CAMISETAS ========== */
+.modelos-container {
+  margin-bottom: 30px;
+}
+
+.modelos-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d4b0ff;
+}
+
+.camisetas-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.camiseta-card {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(25, 0, 45, 0.6);
+  border-radius: 24px;
+  padding: 24px 16px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.camiseta-card:hover {
+  transform: translateY(-5px);
+  background: rgba(25, 0, 45, 0.8);
+}
+
+.camiseta-card.selected {
+  border-color: #b87cff;
+  background: rgba(94, 26, 143, 0.3);
+  box-shadow: 0 0 20px rgba(184, 124, 255, 0.2);
+}
+
+.camiseta-preview {
+  margin-bottom: 16px;
+}
+
+.camiseta-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camiseta-icon svg {
+  width: 100px;
+  height: 100px;
+}
+
+.camiseta-icon.white svg path {
+  fill: #f5f5f5;
+  stroke: #ccc;
+}
+
+.camiseta-icon.black svg path {
+  fill: #1a1a1a;
+  stroke: #555;
+}
+
+.camiseta-info h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #e0e0e0;
+}
+
+.camiseta-info p {
+  font-size: 0.75rem;
+  color: #b87cff;
+  margin: 0;
+}
+
+.camiseta-radio {
+  margin-top: 12px;
+}
+
+.radio-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #b87cff;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.radio-dot.active {
+  background: #b87cff;
+  box-shadow: 0 0 8px #b87cff;
+}
+
+.modelo-selecionado {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b87cff;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(94, 26, 143, 0.3);
+}
+
+.modelo-selecionado strong {
+  color: #e0b0ff;
+}
+
+.camiseta-info-box {
+  margin: 20px 0;
+}
+
+.preco-box {
+  background: linear-gradient(135deg, #2d0047, #1a002a);
+  border-radius: 60px;
+  padding: 16px 24px;
+  text-align: center;
+  border: 1px solid #b87cff;
+}
+
+.preco-label {
+  font-size: 0.8rem;
+  color: #b87cff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.preco-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e0b0ff;
+}
+
+.instrucoes-compra {
+  background: rgba(25, 0, 45, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.instrucoes-compra ol {
+  margin-left: 20px;
+  margin-top: 12px;
+}
+
+.instrucoes-compra li {
+  margin: 8px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.camisetas-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+.camiseta-pix {
+  margin: 20px 0;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .camisetas-grid {
+    gap: 15px;
+  }
+  
+  .camiseta-card {
+    min-width: 140px;
+    padding: 16px 12px;
+  }
+  
+  .camiseta-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .camiseta-icon svg {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .preco-valor {
+    font-size: 1.5rem;
+  }
+  
+  .instrucoes-compra li {
+    font-size: 0.8rem;
+  }
+}
+/* ========== CARROSSEL DE IMAGENS ========== */
+.image-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  background: #1a002a;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  background: #5e1a8f;
+}
+
+.carousel-nav.prev {
+  left: 8px;
+}
+
+.carousel-nav.next {
+  right: 8px;
+}
+
+.carousel-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carousel-indicator .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  transition: all 0.2s;
+}
+
+.carousel-indicator .dot.active {
+  background: #b87cff;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 600px) {
+  .image-carousel {
+    max-width: 150px;
+  }
+  
+  .carousel-nav {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+}
+
+.aviso-pagamento p {
+  margin: 1.5;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-align: center;  /* ← Garantindo centralização */
+}
+
+.btn-arrow-two {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover .btn-arrow-two {
+  transform: translateX(4px);
+}
+
+/* ========== PÁGINA DE SUBMISSÕES ========== */
+.submissoes-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Card principal */
+.submissoes-card {
+  background: rgba(25, 0, 45, 0.6);
+  border-radius: 24px;
+  border: 1px solid rgba(94, 26, 143, 0.3);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* Itens do card */
+.submissoes-item {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(94, 26, 143, 0.2);
+}
+
+.submissoes-item:last-child {
+  border-bottom: none;
+}
+
+.submissoes-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b87cff;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.submissoes-item p {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.submissoes-item strong {
+  color: #d4b0ff;
+}
+
+/* Item de destaque (prazo) */
+.submissoes-item.destaque {
+  background: rgba(0, 168, 107, 0.05);
+}
+
+.prazo-data {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00a86b;
+  margin-top: 4px;
+}
+
+/* Contato */
+.submissoes-item.contato a {
+  color: #b87cff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.submissoes-item.contato a:hover {
+  color: #e0b0ff;
+  text-decoration: underline;
+}
+
+/* Botão */
+.btn-submeter {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5e1a8f, #3a005a);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Space Grotesk', monospace;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-submeter:hover {
+  background: #7a2ab3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(94, 26, 143, 0.4);
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn-submeter:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.submissoes-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .submissoes-item {
+    padding: 16px 20px;
+  }
+  
+  .submissoes-item h3 {
+    font-size: 0.9rem;
+  }
+  
+  .submissoes-item p {
+    font-size: 0.8rem;
+  }
+  
+  .prazo-data {
+    font-size: 1.1rem;
+  }
+}
