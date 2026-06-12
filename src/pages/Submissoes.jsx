@@ -27,7 +27,7 @@ const Submissoes = () => {
           {/* Formato do resumo */}
           <div className="submissoes-item">
             <h3>Formato do resumo</h3>
-            <p>O resumo deve ter no máximo <strong>2500 caracteres</strong>. Utilize os modelos disponíveis no formulário de submissão para garantir a formatação correta.</p>
+            <p>O resumo deve ter entre <strong>250 a 400 palavras</strong>. Utilize os modelos disponíveis no formulário de submissão para garantir a formatação correta.</p>
           </div>
 
           {/* Prazo */}
