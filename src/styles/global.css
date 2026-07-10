@@ -1,0 +1,31 @@
+@keyframes glitch {
+  0%, 100% { text-shadow: 2px 0 #3a005a, -2px 0 #7a2ab3; }
+  33% { text-shadow: -3px 0 #3a005a, 3px 0 #7a2ab3; }
+  66% { text-shadow: 3px 0 #3a005a, -3px 0 #7a2ab3; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glitch-text {
+  animation: glitch 3s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a002a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5e1a8f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a2ab3;
+}
