@@ -21,7 +21,7 @@ const scheduleData = {
     { time: '10:00 - 10:20', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
     { time: '10:20 - 11:00', title: 'Óptica Não Linear e Fotônica Quântica em Sistemas Experimentais: Caracterização de χ³ em Materiais 2D e Geração de Pares Fótons Emaranhados', speaker: 'Prof. Alyson Carvalho', location: palestras },
     { time: '11:00 - 12:00', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
-    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscriçôes abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
+    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
   ],
   3: [
     { time: '08:00 - 08:40', title: 'Cosmologia com Fast Radio Bursts', speaker: 'Dra. Thaís Lemos', location: palestras },
