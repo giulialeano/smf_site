@@ -10,7 +10,8 @@ import BinaryFloat from './components/BinaryFloat'
 import Home from './pages/Home'
 import Programacao from './pages/Programacao'
 import Submissoes from './pages/Submissoes'
-import Camisetas from './pages/Camisetas'   // ← NOVA IMPORTAÇÃO
+import Camisetas from './pages/Camisetas' 
+ // ← NOVA IMPORTAÇÃO
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/programacao" element={<Programacao />} />
           <Route path="/submissoes" element={<Submissoes />} />
-          <Route path="/camisetas" element={<Camisetas />} />   {/* ← NOVA ROTA */}
+          <Route path="/camisetas" element={<Camisetas />} />
         </Routes>
         <footer>
           <p>© 2026 XII Semana da Física | Unidade Acadêmica de Física - UFCG</p>
