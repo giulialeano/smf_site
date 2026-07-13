@@ -1,4 +1,4 @@
- import { useState } from 'react'
+import { useState } from 'react'
 
 // Local das palestras
 const palestras = 'Centro de Extensão José Farias Nóbrega'
@@ -8,7 +8,7 @@ const scheduleData = {
   1: [
     { time: '08:00 - 08:30', title: 'Abertura', speaker: 'A confirmar', location: palestras },
     { time: '08:40 - 09:30', title: 'A confirmar', speaker: 'Prof. Dr. Leandro Balby', location: palestras },
-    { time: '09:30 - 10:20', title: 'A confirmar', speaker: 'A confirmar', location: palestras },
+    { time: '09:30 - 10:20', title: 'O Desenvolvimento de Satelites no INPE e o Subsistema de Controle de Altitude', speaker: 'Dr. Ronan Arraes', location: palestras },
     { time: '10:20 - 10:40', title: 'Coffee Break', speaker: 'A confirmar', location: palestras },
     { time: '10:40 - 11:20', title: 'A Travessia Tecnologica da Humanidade: da Tradição a Cibercultura na Era da Educacao 5.0', speaker: 'Prof. Dr. Gustavo de Alencar', location: palestras },
     { time: '11:20 - 12:00', title: 'Mesa Redonda', speaker: 'A confirmar', location: palestras },
@@ -19,9 +19,9 @@ const scheduleData = {
     { time: '08:40 - 09:20', title: '70 Anos da Primeira Detecção dos Neutrinos', speaker: 'Prof. Dr. Diego Cogollo', location: palestras },
     { time: '09:20 - 10:00', title: 'Entre Ondas e Partículas: História, Controvérsias e a Construção da Física Quântica', speaker: 'Prof. Dr. Marcos Barros', location: palestras },
     { time: '10:00 - 10:20', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
-    { time: '10:20 - 11:00', title: 'Óptica Não Linear e Fotônica Quântica em Sistemas Experimentais: Caracterização de χ³ em Materiais 2D e Geração de Pares Fótons Emaranhados', speaker: 'Prof. Alyson Carvalho', location: palestras },
-    { time: '11:00 - 12:00', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
-    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
+    { time: '10:20 - 11:00', title: 'Óptica Não Linear e Fotônica Quântica em Sistemas Experimentais: Caracterização de χ³ em Materiais 2D e Geração de Pares Fótons Emaranhados', speaker: 'Prof.', location: palestras },
+    { time: '11:00 - 12:30', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
+    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscriçôes abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
   ],
   3: [
     { time: '08:00 - 08:40', title: 'Cosmologia com Fast Radio Bursts', speaker: 'Dra. Thaís Lemos', location: palestras },
@@ -29,9 +29,9 @@ const scheduleData = {
     { time: '09:20 - 10:00', title: 'A confirmar', speaker: 'Prof. Dr. Thiago Massoni', location: palestras },
     { time: '10:00 - 10:20', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
     { time: '10:20 - 11:00', title: 'A confirmar', speaker: 'A confirmar', location: palestras},
-    { time: '11:00 - 12:00', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
+    { time: '11:00 - 12:30', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
     { time: '14:00 - 16:00', title: 'OFICINAS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
-    { time: '16:00 - 17:00', title: 'Encerramento', speaker: 'Profa. Dra. Daisy Martins', location: "Auditório Junger Precker - Unidade Acadêmica de Física, Bloco CY" },
+    { time: '16:00 - 17:00', title: 'Encerramento', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
   ]
 }
 
@@ -50,9 +50,18 @@ const Programacao = () => {
     return title === 'MINICURSOS' || title === 'OFICINAS'
   }
 
+  // Função para abrir o formulário correto
+  const handleOpenForm = (title) => {
+    if (title === 'MINICURSOS') {
+      window.open('https://forms.gle/heoS9nudbbpYjYMP9', '_blank')
+    } else if (title === 'OFICINAS') {
+      window.open('https://forms.gle/5JGKWiFD51F3zqiX9', '_blank')
+    }
+  }
+
   return (
     <div className="section programacao-section">
-      <h2>Programação</h2>
+      <h2>Programacao</h2>
       
       <div className="day-buttons">
         {days.map(day => (
@@ -80,6 +89,8 @@ const Programacao = () => {
           <tbody>
             {data.map((item, idx) => {
               const isHighlight = isHighlightRow(item.title)
+              const isMinicursos = item.title === 'MINICURSOS'
+              const isOficinas = item.title === 'OFICINAS'
 
               return (
                 <tr key={idx} style={isHighlight ? { 
@@ -88,7 +99,40 @@ const Programacao = () => {
                   fontWeight: '600'
                 } : {}}>
                   <td className="time-col" style={isHighlight ? { color: '#b87cff' } : {}}>{item.time}</td>
-                  <td className="title-col" style={isHighlight ? { color: '#e0b0ff' } : {}}>{item.title}</td>
+                  <td className="title-col" style={isHighlight ? { color: '#e0b0ff' } : {}}>
+                    {item.title}
+                    {(isMinicursos || isOficinas) && (
+                      <button
+                        onClick={() => handleOpenForm(item.title)}
+                        style={{
+                          marginLeft: '12px',
+                          fontSize: '0.65rem',
+                          background: 'transparent',
+                          border: '1px solid rgba(184, 124, 255, 0.3)',
+                          color: '#b87cff',
+                          padding: '3px 12px',
+                          borderRadius: '20px',
+                          cursor: 'pointer',
+                          fontFamily: 'Space Grotesk, monospace',
+                          fontWeight: '500',
+                          transition: 'all 0.3s ease',
+                          letterSpacing: '0.5px'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.background = 'rgba(184, 124, 255, 0.15)'
+                          e.target.style.borderColor = '#b87cff'
+                          e.target.style.transform = 'scale(1.05)'
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'transparent'
+                          e.target.style.borderColor = 'rgba(184, 124, 255, 0.3)'
+                          e.target.style.transform = 'scale(1)'
+                        }}
+                      >
+                        Inscrever-se
+                      </button>
+                    )}
+                  </td>
                   <td className="speaker-col" style={isHighlight ? { color: '#c48bff' } : {}}>{item.speaker}</td>
                   <td className="location-col" style={isHighlight ? { color: '#b87cff' } : {}}>{item.location}</td>
                 </tr>
@@ -99,7 +143,7 @@ const Programacao = () => {
       </div>
       
       <p className="info-obs programacao-info italic" style={{ marginTop: '30px', textAlign: 'center' }}>
-        Programação sujeita a alterações
+        Programacao sujeita a alteracoes
       </p>
     </div>
   )
