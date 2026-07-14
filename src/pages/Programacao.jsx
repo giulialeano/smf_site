@@ -64,7 +64,7 @@ const Programacao = () => {
 
   return (
     <div className="section programacao-section">
-      <h2>Programacao</h2>
+      <h2>Programação</h2>
       
       <div className="day-buttons">
         {days.map(day => (
