@@ -9,7 +9,7 @@ const scheduleData = {
     { time: '07:30', title: 'Credenciamento', location: palestras },
     { time: '08:00 - 08:30', title: 'Abertura do evento', location: palestras },
     { time: '08:40 - 09:30', title: 'IA não é o problema. Somos nós.', speaker: 'Prof. Dr. Leandro Balby', location: palestras },
-    { time: '09:30 - 10:20', title: 'A Travessia Tecnologica da Humanidade: da Tradição a Cibercultura na Era da Educacao 5.0', speaker: 'Prof. Dr. Gustavo de Alencar', location: palestras },
+    { time: '09:30 - 10:20', title: 'A Travessia Tecnologica da Humanidade: da Tradição a Cibercultura na Era da Educação 5.0', speaker: 'Prof. Dr. Gustavo de Alencar', location: palestras },
     { time: '10:20 - 10:40', title: 'Coffee Break', speaker: ' ', location: palestras },
     { time: '10:40 - 12:00', title: 'Mesa Redonda', speaker: 'Prof. Marcos Barros', location: palestras },
     { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
@@ -19,9 +19,9 @@ const scheduleData = {
     { time: '08:40 - 09:20', title: '70 Anos da Primeira Detecção dos Neutrinos', speaker: 'Prof. Dr. Diego Cogollo', location: palestras },
     { time: '09:20 - 10:00', title: 'Entre Ondas e Partículas: História, Controvérsias e a Construção da Física Quântica', speaker: 'Prof. Dr. Marcos Barros', location: palestras },
     { time: '10:00 - 10:20', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
-    { time: '10:20 - 11:00', title: 'Óptica Não Linear e Fotônica Quântica em Sistemas Experimentais: Caracterização de χ³ em Materiais 2D e Geração de Pares Fótons Emaranhados', speaker: 'Prof.', location: palestras },
+    { time: '10:20 - 11:00', title: 'Óptica Não Linear e Fotônica Quântica em Sistemas Experimentais: Caracterização de χ³ em Materiais 2D e Geração de Pares Fótons Emaranhados', speaker: 'Prof. Alyson Carvalho', location: palestras },
     { time: '11:00 - 12:30', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
-    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscriçôes abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
+    { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
   ],
   3: [
     { time: '08:00 - 08:40', title: 'Cosmologia com Fast Radio Bursts', speaker: 'Dra. Thaís Lemos', location: palestras },
@@ -32,7 +32,7 @@ const scheduleData = {
     { time: '14:00 - 16:00', title: 'OFICINAS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
     { time: '16:00 - 16:30', title: 'Coffee Break & Apresentação de Pôsteres', speaker: '', location: palestras },
     { time: '16:30 - 17:30', title: 'A Física está ao seu redor?', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
-    { time: '17:30 - 18:00', title: 'Encerramento', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
+    { time: '17:30 - 18:00', title: 'Encerramento', speaker: '', location: palestras },
 
 
   ]
