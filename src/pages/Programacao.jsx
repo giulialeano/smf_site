@@ -28,7 +28,7 @@ const scheduleData = {
     { time: '08:40 - 09:20', title: 'Cristais Orgânicos Não Porosos: O Futuro da Captura de CO2?', speaker: 'Prof. Dr. Rodrigo Lima', location: palestras },
     { time: '09:20 - 10:20', title: 'Encantos e Perigos da IA na Pesquisa', speaker: 'Prof. Dr. Thiago Massoni', location: palestras },
     { time: '10:20 - 10:40', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
-    { time: '10:40 - 12:00', title: 'Apresentações orais de alunos', speaker: 'A confirmar', location: palestras},
+    { time: '10:40 - 12:00', title: 'Apresentações orais de alunos', speaker: '', location: palestras},
     { time: '14:00 - 16:00', title: 'OFICINAS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
     { time: '16:00 - 16:30', title: 'Coffee Break & Apresentação de Pôsteres', speaker: '', location: palestras },
     { time: '16:30 - 17:30', title: 'A Física está ao seu redor?', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
@@ -146,7 +146,7 @@ const Programacao = () => {
       </div>
       
       <p className="info-obs programacao-info italic" style={{ marginTop: '30px', textAlign: 'center' }}>
-        Programacao sujeita a alteracoes
+        
       </p>
     </div>
   )
