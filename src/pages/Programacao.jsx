@@ -10,7 +10,7 @@ const scheduleData = {
     { time: '08:00 - 08:30', title: 'Abertura do evento', location: palestras },
     { time: '08:40 - 09:30', title: 'IA não é o problema. Somos nós.', speaker: 'Prof. Dr. Leandro Balby', location: palestras },
     { time: '09:30 - 10:20', title: 'A Travessia Tecnologica da Humanidade: da Tradição a Cibercultura na Era da Educacao 5.0', speaker: 'Prof. Dr. Gustavo de Alencar', location: palestras },
-    { time: '10:20 - 10:40', title: 'Coffee Break', speaker: 'A confirmar', location: palestras },
+    { time: '10:20 - 10:40', title: 'Coffee Break', speaker: ' ', location: palestras },
     { time: '10:40 - 12:00', title: 'Mesa Redonda', speaker: 'Prof. Marcos Barros', location: palestras },
     { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
   ],
