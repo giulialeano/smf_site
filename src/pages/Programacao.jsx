@@ -11,7 +11,7 @@ const scheduleData = {
     { time: '08:40 - 09:30', title: 'IA não é o problema. Somos nós.', speaker: 'Prof. Dr. Leandro Balby', location: palestras },
     { time: '09:30 - 10:20', title: 'A Travessia Tecnologica da Humanidade: da Tradição a Cibercultura na Era da Educacao 5.0', speaker: 'Prof. Dr. Gustavo de Alencar', location: palestras },
     { time: '10:20 - 10:40', title: 'Coffee Break', speaker: 'A confirmar', location: palestras },
-    { time: '10:40 - 12:00', title: 'Mesa Redonda:', speaker: 'Prof. Marcos Barros', location: palestras },
+    { time: '10:40 - 12:00', title: 'Mesa Redonda', speaker: 'Prof. Marcos Barros', location: palestras },
     { time: '14:00 - 16:00', title: 'MINICURSOS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
   ],
   2: [
@@ -26,12 +26,15 @@ const scheduleData = {
   3: [
     { time: '08:00 - 08:40', title: 'Cosmologia com Fast Radio Bursts', speaker: 'Dra. Thaís Lemos', location: palestras },
     { time: '08:40 - 09:20', title: 'Cristais Orgânicos Não Porosos: O Futuro da Captura de CO2?', speaker: 'Prof. Dr. Rodrigo Lima', location: palestras },
-    { time: '09:20 - 10:00', title: 'A confirmar', speaker: 'Prof. Dr. Thiago Massoni', location: palestras },
-    { time: '10:00 - 10:20', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
-    { time: '10:20 - 11:00', title: 'A confirmar', speaker: 'A confirmar', location: palestras},
-    { time: '11:00 - 12:30', title: 'Apresentações Orais dos Alunos', speaker: '  ', location: palestras },
+    { time: '09:20 - 10:20', title: 'Encantos e Perigos da IA na Pesquisa', speaker: 'Prof. Dr. Thiago Massoni', location: palestras },
+    { time: '10:20 - 10:40', title: 'Coffee Break & Apresentação de Pôsteres', speaker: ' ', location: palestras },
+    { time: '10:40 - 12:00', title: 'Apresentações orais de alunos', speaker: 'A confirmar', location: palestras},
     { time: '14:00 - 16:00', title: 'OFICINAS', speaker: 'Inscrições abertas', location: 'Unidade Acadêmica de Física - Bloco CY' },
-    { time: '16:00 - 17:00', title: 'Encerramento', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
+    { time: '16:00 - 16:30', title: 'Coffee Break & Apresentação de Pôsteres', speaker: '', location: palestras },
+    { time: '16:30 - 17:30', title: 'A Física está ao seu redor?', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
+    { time: '17:30 - 18:00', title: 'Encerramento', speaker: 'Profa. Dra. Daisy Martins', location: palestras },
+
+
   ]
 }
 
